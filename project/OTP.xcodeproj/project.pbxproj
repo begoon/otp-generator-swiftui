@@ -11,22 +11,46 @@
 		1101163A290D943F0079C4C4 /* Base32.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11011639290D943F0079C4C4 /* Base32.swift */; };
 		11011640290DC0DA0079C4C4 /* Accounts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1101163F290DC0DA0079C4C4 /* Accounts.swift */; };
 		11011642290DC78D0079C4C4 /* Cli.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11011641290DC78D0079C4C4 /* Cli.swift */; };
+		116FE109291024A9009B9F46 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116FE108291024A9009B9F46 /* main.swift */; };
+		116FE10E2910413C009B9F46 /* Base32.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11011639290D943F0079C4C4 /* Base32.swift */; };
+		116FE10F2910413C009B9F46 /* Accounts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1101163F290DC0DA0079C4C4 /* Accounts.swift */; };
+		116FE1102910413C009B9F46 /* Cli.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11011641290DC78D0079C4C4 /* Cli.swift */; };
+		116FE1112910413C009B9F46 /* Totp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11011635290D8BE80079C4C4 /* Totp.swift */; };
 		119DBFD9290D52D700473D52 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119DBFD8290D52D700473D52 /* App.swift */; };
-		119DBFDD290D52D800473D52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 119DBFDC290D52D800473D52 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		116FE104291024A9009B9F46 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		11011635290D8BE80079C4C4 /* Totp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Totp.swift; sourceTree = "<group>"; };
 		11011639290D943F0079C4C4 /* Base32.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base32.swift; sourceTree = "<group>"; };
 		1101163F290DC0DA0079C4C4 /* Accounts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Accounts.swift; sourceTree = "<group>"; };
 		11011641290DC78D0079C4C4 /* Cli.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cli.swift; sourceTree = "<group>"; };
+		116FE106291024A9009B9F46 /* otp */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = otp; sourceTree = BUILT_PRODUCTS_DIR; };
+		116FE108291024A9009B9F46 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		119DBFD5290D52D700473D52 /* OTP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OTP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		119DBFD8290D52D700473D52 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
-		119DBFDC290D52D800473D52 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		119DBFE1290D52D800473D52 /* OTP.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OTP.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		116FE103291024A9009B9F46 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		119DBFD2290D52D700473D52 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -37,10 +61,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		116FE107291024A9009B9F46 /* otp */ = {
+			isa = PBXGroup;
+			children = (
+				116FE108291024A9009B9F46 /* main.swift */,
+			);
+			path = otp;
+			sourceTree = "<group>";
+		};
 		119DBFCC290D52D700473D52 = {
 			isa = PBXGroup;
 			children = (
 				119DBFD7290D52D700473D52 /* OTP */,
+				116FE107291024A9009B9F46 /* otp */,
 				119DBFD6290D52D700473D52 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				119DBFD5290D52D700473D52 /* OTP.app */,
+				116FE106291024A9009B9F46 /* otp */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -57,7 +91,6 @@
 			isa = PBXGroup;
 			children = (
 				119DBFD8290D52D700473D52 /* App.swift */,
-				119DBFDC290D52D800473D52 /* Assets.xcassets */,
 				119DBFE1290D52D800473D52 /* OTP.entitlements */,
 				11011635290D8BE80079C4C4 /* Totp.swift */,
 				1101163F290DC0DA0079C4C4 /* Accounts.swift */,
@@ -70,6 +103,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		116FE105291024A9009B9F46 /* otp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 116FE10A291024A9009B9F46 /* Build configuration list for PBXNativeTarget "otp" */;
+			buildPhases = (
+				116FE102291024A9009B9F46 /* Sources */,
+				116FE103291024A9009B9F46 /* Frameworks */,
+				116FE104291024A9009B9F46 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = otp;
+			productName = otp;
+			productReference = 116FE106291024A9009B9F46 /* otp */;
+			productType = "com.apple.product-type.tool";
+		};
 		119DBFD4290D52D700473D52 /* OTP */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 119DBFE4290D52D800473D52 /* Build configuration list for PBXNativeTarget "OTP" */;
@@ -94,9 +144,12 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1400;
+				LastSwiftUpdateCheck = 1410;
 				LastUpgradeCheck = 1410;
 				TargetAttributes = {
+					116FE105291024A9009B9F46 = {
+						CreatedOnToolsVersion = 14.1;
+					};
 					119DBFD4290D52D700473D52 = {
 						CreatedOnToolsVersion = 14.0.1;
 					};
@@ -116,6 +169,7 @@
 			projectRoot = "";
 			targets = (
 				119DBFD4290D52D700473D52 /* OTP */,
+				116FE105291024A9009B9F46 /* otp */,
 			);
 		};
 /* End PBXProject section */
@@ -125,13 +179,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				119DBFDD290D52D800473D52 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		116FE102291024A9009B9F46 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				116FE1102910413C009B9F46 /* Cli.swift in Sources */,
+				116FE109291024A9009B9F46 /* main.swift in Sources */,
+				116FE10E2910413C009B9F46 /* Base32.swift in Sources */,
+				116FE1112910413C009B9F46 /* Totp.swift in Sources */,
+				116FE10F2910413C009B9F46 /* Accounts.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		119DBFD1290D52D700473D52 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -147,6 +212,24 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		116FE10B291024A9009B9F46 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		116FE10C291024A9009B9F46 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 		119DBFE2290D52D800473D52 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -339,6 +422,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		116FE10A291024A9009B9F46 /* Build configuration list for PBXNativeTarget "otp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				116FE10B291024A9009B9F46 /* Debug */,
+				116FE10C291024A9009B9F46 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		119DBFD0290D52D700473D52 /* Build configuration list for PBXProject "OTP" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
