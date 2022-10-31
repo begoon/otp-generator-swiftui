@@ -21,12 +21,12 @@ func parseAccounts(from text: String) throws -> Accounts {
     return (try? JSONDecoder().decode(Accounts.self, from: data)) ?? []
 }
 
-let defaultFileName = "Accounts.json"
+let defaultFileName = ".otp/Accounts.json"
 let defaultFileURL = FileManager.default.homeDirectoryForCurrentUser.appendingPathComponent(
     defaultFileName
 )
 
-func loadAccounts(from fileName: String = "") throws -> String {
+func accountsFileName(from fileName: String = "") throws -> URL {
     var fileURL: URL = defaultFileURL
     if !fileName.isEmpty {
         guard let url = URL(string: "file://" + fileName) else {
@@ -35,6 +35,11 @@ func loadAccounts(from fileName: String = "") throws -> String {
         fileURL = url
     }
     NSLog("loading accounts from %@", fileURL.absoluteString)
+    return fileURL
+}
+
+func loadAccounts(from fileName: String = "") throws -> String {
+    let fileURL = try accountsFileName(from: fileName)
     guard let content = try? String(contentsOf: fileURL) else {
         throw ParseError.invalidFile(url: fileURL)
     }
