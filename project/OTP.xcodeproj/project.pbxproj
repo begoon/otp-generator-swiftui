@@ -38,9 +38,9 @@
 		11011641290DC78D0079C4C4 /* Cli.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cli.swift; sourceTree = "<group>"; };
 		116FE106291024A9009B9F46 /* otp */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = otp; sourceTree = BUILT_PRODUCTS_DIR; };
 		116FE108291024A9009B9F46 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		116FE1122910484C009B9F46 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
 		119DBFD5290D52D700473D52 /* OTP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OTP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		119DBFD8290D52D700473D52 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
-		119DBFE1290D52D800473D52 /* OTP.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OTP.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +72,7 @@
 		119DBFCC290D52D700473D52 = {
 			isa = PBXGroup;
 			children = (
+				116FE1122910484C009B9F46 /* Makefile */,
 				119DBFD7290D52D700473D52 /* OTP */,
 				116FE107291024A9009B9F46 /* otp */,
 				119DBFD6290D52D700473D52 /* Products */,
@@ -91,7 +92,6 @@
 			isa = PBXGroup;
 			children = (
 				119DBFD8290D52D700473D52 /* App.swift */,
-				119DBFE1290D52D800473D52 /* OTP.entitlements */,
 				11011635290D8BE80079C4C4 /* Totp.swift */,
 				1101163F290DC0DA0079C4C4 /* Accounts.swift */,
 				11011639290D943F0079C4C4 /* Base32.swift */,
@@ -216,6 +216,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				PRODUCT_BUNDLE_IDENTIFIER = self.otp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -225,6 +227,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				PRODUCT_BUNDLE_IDENTIFIER = self.otp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -352,7 +356,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = OTP/Otp.entitlements;
 				CODE_SIGN_IDENTITY = "-";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
@@ -388,7 +391,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = OTP/Otp.entitlements;
 				CODE_SIGN_IDENTITY = "-";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;

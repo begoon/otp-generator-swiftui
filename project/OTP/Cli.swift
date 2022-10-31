@@ -3,6 +3,12 @@ import Foundation
 let fileNameFlagPrefix = "--accounts="
 
 func cli() {
+    if CommandLine.arguments.count < 2 {
+        let exe = CommandLine.arguments[0]
+        print("usage \(exe) account [--accounts=filename.json]")
+        return
+    }
+    
     let label = CommandLine.arguments[1]
 
     var fileName = String()
