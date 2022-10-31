@@ -15,8 +15,11 @@ struct OTPApp: App {
         return Array(shortcuts)[index]
     }
 
+    @State private var id = 0
+
     var body: some Scene {
         MenuBarExtra("-", systemImage: "key.horizontal.fill") {
+            let accounts = accounts()
             ForEach(accounts.enumerated().map {IdentifiableAccount(index: $0, account: $1)}) {
                 element in Button(element.account.label) {
                     NSPasteboard.general.clearContents()
@@ -27,10 +30,13 @@ struct OTPApp: App {
                 .keyboardShortcut(KeyboardShortcut(KeyEquivalent(shortcut(index: element.index))))
             }
             Divider()
+            Button("Reload") {
+                id += 1
+            }.id(id)
+            .keyboardShortcut("r")
             Button("Quit") {
                 NSApplication.shared.terminate(nil)
             }.keyboardShortcut("q")
-                .help("lllll")
         }
     }
 }

@@ -1,5 +1,5 @@
 func cli() {
-    print(accounts)
+    let accounts = accounts()
     let name = CommandLine.arguments[1]
     guard let account = (accounts.first { account in account.label == name }) else {
         print("account", name, "not found")
