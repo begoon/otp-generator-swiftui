@@ -9,12 +9,14 @@ run:
 	swift - central \
 	--accounts=$(HOME)/Library/Containers/self.otp/Data/Accounts.json)
 
-release: build
+release: clean build
 	-rm -rf release
 	mkdir release
-	cp build/Release/otp release
 	cp -r build/Release/OTP.app release
 	
 build:
-	xcodebuild -alltargets
+	xcodebuild
+
+clean:
+	-rm -rf build
 

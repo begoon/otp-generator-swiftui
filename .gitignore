@@ -1,5 +1,4 @@
-project/OTP.xcodeproj/project.xcworkspace
-project/OTP.xcodeproj/xcuserdata
+*xcuserstate
 .DS_Store
-project/build
-project/release
+build
+release
