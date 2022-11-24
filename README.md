@@ -24,7 +24,7 @@ The example of "Accounts.json":
 ]
 ```
 
-This file contains one account named "central". The secret (one-time password secret) is "DRFC7I3I6B2F4CCP" (base32), and the template to generate the generated password is "123456<@>". The password will be a concatenation of "123456" and the actual TOTP, for example, "123456410449".
+This file contains one account named "central". The secret (one-time password secret) is "DRFC7I3I6B2F4CCP" (base32), and the template to generate the generated password is "123456<@>". The password will be a concatenation of "123456" and the actual TOTP, for example, "123456410449". The "<@>" is the placeholder for TOTP.
 
 The configuration file can contain multiple accounts.
 
